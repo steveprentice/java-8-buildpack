@@ -20,8 +20,12 @@
 
     <Listener className='org.apache.catalina.core.JasperListener'/>
 
+    <GlobalNamingResources>
+        <Resource name="UserDatabase" auth="Container" type="org.apache.catalina.UserDatabase" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" pathname="conf/tomcat-users.xml" />
+    </GlobalNamingResources>
+
     <Service name='Catalina'>
-        <Connector port='${http.port}' bindOnInit="false"/>
+        <Connector port='${http.port}' bindOnInit="false" protocol="org.apache.coyote.http11.Http11NioProtocol" compression="on" compressionMinSize="1024" compressableMimeType="application/json,text/html,text/xml" maxConnections="10000" maxThreads="400" connectionTimeout="30000" keepAliveTimeout="30000" maxKeepAliveRequests="-1" maxHeaderCount="-1" maxParameterCount="-1" maxPostSize="-1" maxSavePostSize="-1"/>
 
         <Engine defaultHost='localhost' name='Catalina'>
             <Valve className="org.apache.catalina.valves.RemoteIpValve" protocolHeader="x-forwarded-proto"/>
