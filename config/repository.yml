@@ -15,4 +15,4 @@
 
 # Repository configuration
 ---
-default_repository_root: http://cf-buildpack.wbx2.com
+default_repository_root: http://download.run.pivotal.io
