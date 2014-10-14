@@ -17,7 +17,7 @@
 ---
 tomcat:
   version: 7.0.+
-  repository_root: "https://download.run.pivotal.io/tomcat"
+  repository_root: "{default.repository.root}/cf-tomcat/tomcat"
 lifecycle_support:
   version: 2.+
   repository_root: "{default.repository.root}/cf-tomcat/tomcat-lifecycle-support"
