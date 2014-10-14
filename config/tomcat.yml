@@ -17,20 +17,20 @@
 ---
 tomcat:
   version: 7.0.+
-  repository_root: "{default.repository.root}/tomcat"
+  repository_root: "{default.repository.root}/cf-tomcat/tomcat"
 lifecycle_support:
   version: 2.+
-  repository_root: "{default.repository.root}/tomcat-lifecycle-support"
+  repository_root: "{default.repository.root}/cf-tomcat/tomcat-lifecycle-support"
 logging_support:
   version: 2.+
-  repository_root: "{default.repository.root}/tomcat-logging-support"
+  repository_root: "{default.repository.root}/cf-tomcat/tomcat-logging-support"
 access_logging_support:
   version: 2.+
-  repository_root: "{default.repository.root}/tomcat-access-logging-support"
+  repository_root: "{default.repository.root}/cf-tomcat/tomcat-access-logging-support"
   access_logging: disabled
 redis_store:
   version: 1.+
-  repository_root: "{default.repository.root}/redis-store"
+  repository_root: "{default.repository.root}/cf-tomcat/redis-store"
   database: 0
   timeout: 2000
   connection_pool_size: 2
