@@ -17,6 +17,5 @@
 # Note that the repository is shared with the Play Auto Reconfiguration framework and should be kept in step to
 # avoid conflicts.
 ---
-version: 1.+
-repository_root: "{default.repository.root}/cf-spring/auto-reconfiguration"
-enabled: true
+version: 0.+
+repository_root: "http://cf-buildpack.wbx2.com/cf-spring"
