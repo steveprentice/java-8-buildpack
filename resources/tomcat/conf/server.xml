@@ -25,7 +25,7 @@
     </GlobalNamingResources>
 
     <Service name='Catalina'>
-        <Connector server="Redacted" port='${http.port}' bindOnInit="false" protocol="org.apache.coyote.http11.Http11NioProtocol" compression="on" compressionMinSize="1024" compressableMimeType="application/json,text/html,text/xml" prestartminSpareThreads="true" minSpareThreads="64" maxConnections="10000" maxThreads="384" connectionTimeout="30000" keepAliveTimeout="30000" maxKeepAliveRequests="-1" maxHeaderCount="-1" maxParameterCount="-1" maxPostSize="-1" maxSavePostSize="-1"/>
+        <Connector server="Redacted" port='${http.port}' bindOnInit="false" protocol="org.apache.coyote.http11.Http11NioProtocol" compression="on" compressionMinSize="1024" compressableMimeType="application/json,text/html,text/xml" maxIdleTime="30000" prestartminSpareThreads="true" minSpareThreads="64" maxConnections="10000" maxThreads="384" connectionTimeout="30000" keepAliveTimeout="30000" maxKeepAliveRequests="-1" maxHeaderCount="-1" maxParameterCount="-1" maxPostSize="-1" maxSavePostSize="-1"/>
 
         <Engine defaultHost='localhost' name='Catalina'>
             <Valve className="org.apache.catalina.valves.RemoteIpValve" protocolHeader="x-forwarded-proto"/>
