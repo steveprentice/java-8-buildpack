@@ -29,6 +29,7 @@
         <Connector executor="nioconnector" maxThreads="384" minSpareThreads="64" server="Redacted" port='${http.port}' bindOnInit="false" protocol="org.apache.coyote.http11.Http11NioProtocol" compression="on" compressionMinSize="1024" compressableMimeType="application/json,text/html,text/xml" maxConnections="10000" connectionTimeout="30000" keepAliveTimeout="30000" maxKeepAliveRequests="-1" maxHeaderCount="-1" maxParameterCount="-1" maxPostSize="-1" maxSavePostSize="-1"/>
 
         <Engine defaultHost='localhost' name='Catalina'>
+            <Valve className="org.apache.catalina.valves.ErrorReportValve" showServerInfo="false" />
             <Valve className="org.apache.catalina.valves.RemoteIpValve" protocolHeader="x-forwarded-proto"/>
             <Valve className="com.gopivotal.cloudfoundry.tomcat.logging.access.CloudFoundryAccessLoggingValve"
                    pattern='[ACCESS] %h %l %t %D %F %B %S vcap_request_id:%{X-Vcap-Request-Id}i' enabled="${access.logging.enabled}"/>
