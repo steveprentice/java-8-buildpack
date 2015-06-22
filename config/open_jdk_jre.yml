@@ -20,7 +20,7 @@ repository_root: "{default.repository.root}/cf-openjdk/{platform}/{architecture}
 version: 1.8.+
 memory_sizes:
   # permgen: 128m
-  heap: 1024m
+  heap: 2048m
   metaspace: 128m
   stack: 1m
 memory_heuristics:
